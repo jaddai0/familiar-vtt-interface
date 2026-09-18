@@ -1,0 +1,16 @@
+{
+  "name": "familiar-vtt-interface",
+  "version": "0.2.1",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test tests/module-contract.test.mjs tests/interaction.test.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "30.0.0"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}

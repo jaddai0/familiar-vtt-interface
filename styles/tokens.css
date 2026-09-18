@@ -1,0 +1,77 @@
+body.familiar-vtt-interface {
+  --fvtt-font-body: "Signika", sans-serif;
+  --fvtt-font-icons: "Font Awesome 6 Pro";
+  --fvtt-font-icons-brands: "Font Awesome 6 Brands";
+  --fvtt-canvas: #d5c9a9;
+  --fvtt-panel: #1f1f1f;
+  --fvtt-panel-deep: #0b0b0c;
+  --fvtt-panel-raised: #383838;
+  --fvtt-panel-hover: #454545;
+  --fvtt-text: #e7e5eb;
+  --fvtt-text-muted: #b8b6bd;
+  --fvtt-line: #454545;
+  --fvtt-line-strong: #a3a1a7;
+  --fvtt-accent: #842aa2;
+  --fvtt-accent-raised: #9850b1;
+  --fvtt-accent-soft: #ba84cb;
+  --fvtt-focus: #78b9ff;
+  --fvtt-danger: #bd321f;
+  --fvtt-control-size: 42px;
+  --fvtt-row-height: 48px;
+  --fvtt-folder-height: 50px;
+  --fvtt-thumbnail-size: 40px;
+  --fvtt-tab-height: 42px;
+  --fvtt-heading-height: 38px;
+  --fvtt-rail-width: 46px;
+  --fvtt-sidebar-collapsed-width: 54px;
+  --fvtt-popover-width: 280px;
+  --fvtt-map-nav-height: 28px;
+  --fvtt-map-name-width: 180px;
+  --fvtt-map-name-min-width: 72px;
+  --fvtt-resize-hit: 8px;
+  --fvtt-danger-text: #ffb4a6;
+  --fvtt-selection-shadow: inset 3px 0 0 var(--fvtt-accent-soft);
+  --fvtt-sidebar-width: 360px;
+  --fvtt-radius-panel: 0 0 20px 20px;
+  --fvtt-radius-control: 8px;
+  --fvtt-radius-rail: 0 0 8px 0;
+  --fvtt-space-1: 4px;
+  --fvtt-space-2: 8px;
+  --fvtt-space-3: 12px;
+  --fvtt-space-4: 16px;
+  --fvtt-space-5: 20px;
+  --fvtt-space-tools-label: 30px;
+  --fvtt-space-sidebar-tabs: 54px;
+  --fvtt-text-xs: 0.75rem;
+  --fvtt-text-sm: 0.875rem;
+  --fvtt-text-md: 1rem;
+  --fvtt-text-lg: 1.25rem;
+  --fvtt-text-xl: 1.5rem;
+  --fvtt-shadow-panel: 0 4px 12px rgb(0 0 0 / 45%);
+  --fvtt-z-tabs: 110;
+  --fvtt-z-popover: 111;
+}
+
+button:where(body.familiar-vtt-interface *) {
+  font-family: inherit;
+}
+
+input:where(body.familiar-vtt-interface *) {
+  font-family: inherit;
+}
+
+select:where(body.familiar-vtt-interface *) {
+  font-family: inherit;
+}
+
+textarea:where(body.familiar-vtt-interface *) {
+  font-family: inherit;
+}
+
+button:where(body.familiar-vtt-interface *):is(.icon, .ui-control, .fas, .far, .fa-solid, .fa-regular) {
+  font-family: var(--fvtt-font-icons);
+}
+
+button:where(body.familiar-vtt-interface *):is(.fab, .fa-brands) {
+  font-family: var(--fvtt-font-icons-brands);
+}

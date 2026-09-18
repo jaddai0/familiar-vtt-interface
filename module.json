@@ -1,0 +1,39 @@
+{
+  "id": "familiar-vtt-interface",
+  "title": "Familiar VTT Interface",
+  "description": "A compact Foundry interface with personal tool pins, clear map states and an adjustable sidebar.",
+  "version": "0.2.1",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13",
+    "maximum": "13"
+  },
+  "authors": [
+    {
+      "name": "Dustin Painter"
+    }
+  ],
+  "esmodules": [
+    "scripts/main.mjs"
+  ],
+  "styles": [
+    "styles/tokens.css",
+    "styles/familiar-vtt-interface.css"
+  ],
+  "relationships": {
+    "conflicts": [
+      {
+        "id": "crlngn-ui",
+        "type": "module",
+        "compatibility": {}
+      }
+    ]
+  },
+  "socket": false,
+  "license": "LICENSE",
+  "readme": "INSTALL.md",
+  "url": "https://github.com/jaddai0/familiar-vtt-interface",
+  "manifest": "https://github.com/jaddai0/familiar-vtt-interface/releases/latest/download/module.json",
+  "download": "https://github.com/jaddai0/familiar-vtt-interface/releases/download/v0.2.1/familiar-vtt-interface-0.2.1.zip",
+  "bugs": "https://github.com/jaddai0/familiar-vtt-interface/issues"
+}
