@@ -289,3 +289,19 @@ body.familiar-vtt-interface [tabindex]:focus-visible { outline: 2px solid var(--
     scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important;
   }
 }
+
+/* Native dialog, flat folder rows and a single compact action row. */
+body.familiar-vtt-interface .fvtt-image-folders { margin: var(--fvtt-space-1) var(--fvtt-space-2); flex: 0 0 auto; }
+body.familiar-vtt-interface .fvtt-asset-folders { display: grid; gap: var(--fvtt-space-2); overflow: auto; }
+body.familiar-vtt-interface .fvtt-asset-folders p { margin: var(--fvtt-space-1) 0; }
+body.familiar-vtt-interface .fvtt-asset-list { min-width: 0; overflow: hidden; }
+body.familiar-vtt-interface .fvtt-asset-row { display: flex; align-items: center; gap: var(--fvtt-space-2); padding: var(--fvtt-space-2) 0; border-bottom: 1px solid var(--fvtt-line); overflow: hidden; }
+body.familiar-vtt-interface .fvtt-asset-label { flex: 1; min-width: 0; overflow: hidden; }
+body.familiar-vtt-interface .fvtt-asset-label :is(strong, small) { display: block; overflow-wrap: anywhere; }
+body.familiar-vtt-interface .fvtt-asset-label small { color: var(--fvtt-text-muted); }
+body.familiar-vtt-interface .fvtt-asset-actions { display: flex; gap: var(--fvtt-space-2); flex-wrap: wrap; overflow: hidden; }
+body.familiar-vtt-interface .fvtt-asset-row button { flex: 0 0 auto; }
+body.familiar-vtt-interface .fvtt-asset-folders details { overflow: hidden; }
+body.familiar-vtt-interface .fvtt-asset-folders summary { cursor: pointer; }
+body.familiar-vtt-interface .fvtt-asset-folders label { display: grid; gap: var(--fvtt-space-1); min-width: 0; }
+body.familiar-vtt-interface .fvtt-asset-folders :is(input, select, textarea) { width: 100%; min-width: 0; box-sizing: border-box; }

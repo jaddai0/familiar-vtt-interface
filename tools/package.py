@@ -8,7 +8,7 @@ from urllib.parse import urlparse
 from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
 
 ROOT = Path(__file__).resolve().parents[1]
-FILES = ('scripts/main.mjs', 'scripts/preferences.mjs', 'styles/tokens.css',
+FILES = ('scripts/main.mjs', 'scripts/preferences.mjs', 'scripts/asset-folders.mjs', 'scripts/folder-connection.mjs', 'styles/tokens.css',
          'styles/familiar-vtt-interface.css', 'LICENSE', 'INSTALL.md')
 
 def build(output, manifest_url=None, download_url=None):

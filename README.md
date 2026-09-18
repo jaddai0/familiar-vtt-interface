@@ -29,6 +29,10 @@ Tested with Foundry 13.351 and dnd5e 5.2.5. Other systems and UI-changing module
 may need additional testing. No server, subscription, AI service or external
 account is required. No world documents are rewritten.
 
+## Image folders
+
+Open **Scenes → Image folders** to save image folders or connect an external collection. Choose a map image to open the normal scene-creation dialog. See [folder setup](ASSET-FOLDERS.md).
+
 ## Development
 
 Use Node 20.19+ and Python 3:

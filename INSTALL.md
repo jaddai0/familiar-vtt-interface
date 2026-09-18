@@ -26,6 +26,10 @@ Enable the module in each world as described above. Use Foundry's normal module
 update check to get new versions. Manual ZIP installations can be updated by
 replacing the module folder with a newer release.
 
+## Image folders
+
+Open **Scenes → Image folders** to save a folder shortcut, browse map images or connect an external folder. The external-folder guide creates a setup command for the computer running Foundry; it never copies your collection. See [folder setup](https://github.com/jaddai0/familiar-vtt-interface/blob/main/ASSET-FOLDERS.md).
+
 ## Use and recovery
 
 Open the three-line button on the left to pin tools. Open the three-dot button

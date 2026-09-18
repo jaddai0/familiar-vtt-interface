@@ -1,0 +1,53 @@
+{
+  "tokensFile": "styles/tokens.css",
+  "css": [
+    "styles/**/*.css"
+  ],
+  "markup": [
+    "scripts/**/*.mjs",
+    "tests/**/*.mjs"
+  ],
+  "fontTokens": [
+    "--fvtt-font-body"
+  ],
+  "radiusTokens": [
+    "--fvtt-radius-panel",
+    "--fvtt-radius-control",
+    "--fvtt-radius-rail"
+  ],
+  "spacingTokens": [
+    "--fvtt-space-"
+  ],
+  "fontSizeTokens": [
+    "--fvtt-text-"
+  ],
+  "entryStylesheets": [
+    "styles/tokens.css",
+    "styles/familiar-vtt-interface.css"
+  ],
+  "ignoreClasses": [
+    "^fa-",
+    "^fas$",
+    "^far$",
+    "^fab$",
+    "^plain$",
+    "^fvtt-native-row$"
+  ],
+  "scrollAllowedSelectors": [
+    "html",
+    "body",
+    ":root",
+    ".directory-list",
+    ".chat-scroll",
+    ".chat-log",
+    "body.familiar-vtt-interface #sidebar-tabs.fvtt-tabs-open > menu",
+    "#scene-controls",
+    "body.familiar-vtt-interface .fvtt-asset-folders"
+  ],
+  "checks": {
+    "os-theme-query": "off"
+  },
+  "runtimeTokens": [
+    "^--ui-scale$"
+  ]
+}

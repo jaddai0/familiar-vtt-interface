@@ -1,3 +1,4 @@
+import {registerAssetFolders, showAssetFolders, closeAssetFolders} from './asset-folders.mjs';
 import {DEFAULTS, clampWidth, loadPreferences, savePreferences} from './preferences.mjs';
 
 const MODULE_ID = 'familiar-vtt-interface';
@@ -240,6 +241,15 @@ const STARTERS = {
   actors: {title: 'Add a character or monster', detail: 'Actors hold character and monster sheets. Drag one onto a map to place its token.', action: 'Add a character or monster', browse: 'Browse creatures in Compendium Packs'},
   journal: {title: 'Create a handout', detail: 'Journal entries hold notes and handouts. Use Show Players in an entry to share it.', action: 'Create a handout'},
 };
+function enhanceAssetAccess() {
+  const scenes = document.querySelector('#sidebar-content #scenes');
+  if (!scenes || !game.user.isGM || scenes.querySelector('.fvtt-image-folders')) return;
+  const entry = button('Image folders', 'fa-folder-open', 'fvtt-image-folders');
+  entry.append(document.createTextNode('Image folders'));
+  entry.addEventListener('click', showAssetFolders);
+  const list = scenes.querySelector('.directory-list');
+  if (list) list.before(entry); else scenes.append(entry);
+}
 function enhanceStarters() {
   for (const [id, copy] of Object.entries(STARTERS)) {
     const tab = document.querySelector(`#sidebar-content #${id}`);
@@ -266,10 +276,11 @@ function enhance() {
   for (const node of restoredAttributes.keys()) if (!node.isConnected) restoredAttributes.delete(node);
   document.body.dataset.fvttDensity = preferences.density;
   document.body.style.setProperty('--fvtt-sidebar-width', `${clampWidth(preferences.width, innerWidth)}px`);
-  enhanceSidebarTabs(); enhanceSceneControls(); enhanceScenes(); enhanceStarters();
+  enhanceSidebarTabs(); enhanceSceneControls(); enhanceScenes(); enhanceStarters(); enhanceAssetAccess();
   observer?.observe(document.querySelector('#interface') || document.body, {childList: true, subtree: true, attributes: true, attributeFilter: ['aria-pressed', 'disabled', 'class']});
 }
 function cleanup() {
+  closeAssetFolders();
   observer?.disconnect(); lifetime?.abort();
   for (const state of disclosures.values()) state.dispose(); disclosures.clear();
   for (const {node, marker} of movedNodes.splice(0)) { if (marker.isConnected) { marker.replaceWith(node); } }
@@ -298,6 +309,7 @@ function applyInterfaceState() {
   document.body.classList.toggle(ROOT_CLASS, enabled); enhance();
 }
 Hooks.once('init', () => {
+  registerAssetFolders();
   game.settings.register(MODULE_ID, 'enabled', {
     name: 'Enable Familiar VTT Interface', hint: 'Use compact tools, personal pins and an adjustable sidebar in this browser.',
     scope: 'client', config: true, type: Boolean, default: true, requiresReload: false, onChange: applyInterfaceState,
